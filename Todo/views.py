@@ -9,4 +9,4 @@ def index(request):
         'footer_message': "Show us some love on our social media platforms, get some new inspiration on how to schedule your time effectively and get all the cool features our app has to offer.",
     }
 
-    return render(request, 'todo/index.html', context)
+    return render(request, 'Todo/index.html', context)

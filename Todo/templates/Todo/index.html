@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="greeting">
+    <h1>{{ greeting }}</h1>
+  </div>
+
+  <div class="about">
+    <h2>About</h2>
+    <p>{{ about }}</p>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  <div class="footer-message">
+    <p>{{ footer_message }}</p>
+  </div>
+{% endblock %}
