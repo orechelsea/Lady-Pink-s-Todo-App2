@@ -1,3 +1,4 @@
+
 body {
     background-color: white;
     margin: 0;
@@ -35,20 +36,15 @@ footer {
     padding: 20px;
     color: white; 
     margin-top: 20px; 
+    position: relative;
+    top: 259px;
 }
-.pink1 {
-    background-color: rgb(222, 94, 115);
-    margin: 5px;
-    border-radius: 30px;
-    padding: 15px;
-    color: white;
-}
+
 .social-media-links {
     display: flex;
     justify-content: center; 
-    gap: 10px; 
+    gap: 690px; 
 }
-
 
 .social-media-links a {
     color: white; 
@@ -62,7 +58,7 @@ footer {
     padding: 5px; 
 }
 
-
+/* Styling for boxes */
 .box {
     background-color: rgb(222, 94, 115); 
     color: white; 
@@ -74,19 +70,19 @@ footer {
 
 /* Specific styles for greeting section */
 .greeting {
-    background-color: rgb(222, 94, 115); 
-    color: white; 
+    position: relative;
+    top: 50px;
+}
+
+/* Specific styles for about section */
+.about {
+    background-color: rgb(255, 255, 255); 
+    color: rgb(222, 94, 115); 
+    border: 1px solid rgb(222, 94, 115);
     border-radius: 10px; 
     padding: 20px; 
     margin-bottom: 20px; 
     text-align: center;
-}
-
-.about {
-    background-color: rgb(255, 255, 255); 
-    color: rgb(222, 94, 115); 
-    border-radius: 10px; 
-    padding: 20px; 
-    margin-bottom: 20px;
-    text-align: center; 
+    position: relative;
+    top: 180px;
 }
