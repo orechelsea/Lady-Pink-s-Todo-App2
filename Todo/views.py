@@ -25,7 +25,7 @@ def update_todo_view(request):
         todo_form = TodoForm()
     
     todos = Todo.objects.filter(user=request.user)
-    return render(request, 'todo/update_todo.html', {
+    return render(request, 'Todo/update_todo.html', {
         'todo_form': todo_form,
         'todos': todos
     })
