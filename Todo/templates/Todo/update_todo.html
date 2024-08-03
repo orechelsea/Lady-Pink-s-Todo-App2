@@ -1,5 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Update Todo - Lady Pink's Todo App
+{% endblock %}
+
 {% block content %}
 <div class="container mt-4">
+    {% if user.is_authenticated %}
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <h2>Add/Update Todo</h2>
@@ -44,5 +51,10 @@
             </ul>
         </div>
     </div>
+    {% else %}
+    <div class="alert alert-warning">
+        <p>You need to be logged in to access this page. <a href="{% url 'login' %}">Log in here</a>.</p>
+    </div>
+    {% endif %}
 </div>
 {% endblock %}
