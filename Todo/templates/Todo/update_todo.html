@@ -1,0 +1,48 @@
+{% block content %}
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2>Add/Update Todo</h2>
+            <form method="post" action="{% url 'update_todo' %}">
+                {% csrf_token %}
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" name="title" class="form-control" id="title" value="{{ todo_form.title.value }}" required>
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description</label>
+                    <textarea name="description" class="form-control" id="description">{{ todo_form.description.value }}</textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="priority" class="form-label">Priority</label>
+                    <select name="priority" class="form-select" id="priority">
+                        <option value="low" {% if todo_form.priority.value == 'low' %}selected{% endif %}>Low</option>
+                        <option value="medium" {% if todo_form.priority.value == 'medium' %}selected{% endif %}>Medium</option>
+                        <option value="high" {% if todo_form.priority.value == 'high' %}selected{% endif %}>High</option>
+                    </select>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" name="complete" class="form-check-input" id="complete" {% if todo_form.complete.value %}checked{% endif %}>
+                    <label class="form-check-label" for="complete">Complete</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Save Todo</button>
+            </form>
+            <hr>
+            <h3>Your Todos</h3>
+            <ul class="list-group">
+                {% for todo in todos %}
+                <li class="list-group-item">
+                    <h5>{{ todo.title }}{% if todo.complete %} <span class="badge bg-success">Complete</span>{% endif %}</h5>
+                    <p>{{ todo.description }}</p>
+                    <small>Priority: {{ todo.priority }}</small>
+                    <form method="post" action="{% url 'delete_todo' todo.id %}" class="d-inline">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

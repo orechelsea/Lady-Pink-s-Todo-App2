@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.decorators import login_required
 from .models import Todo
+from .forms import TodoForm
 # Create your views here.
 
 def index(request):
@@ -10,3 +12,25 @@ def index(request):
     }
 
     return render(request, 'Todo/index.html', context)
+
+def update_todo_view(request):
+    if request.method == 'POST':
+        todo_form = TodoForm(request.POST)
+        if todo_form.is_valid():
+            todo = todo_form.save(commit=False)
+            todo.user = request.user
+            todo.save()
+            return redirect('update_todo')
+    else:
+        todo_form = TodoForm()
+    
+    todos = Todo.objects.filter(user=request.user)
+    return render(request, 'todo/update_todo.html', {
+        'todo_form': todo_form,
+        'todos': todos
+    })
+def delete_todo_view(request, todo_id):
+    todo = get_object_or_404(Todo, id=todo_id, user=request.user)
+    if request.method == 'POST':
+        todo.delete()
+        return redirect('update_todo')
