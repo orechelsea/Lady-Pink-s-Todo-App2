@@ -13,18 +13,27 @@ def index(request):
 
     return render(request, 'Todo/index.html', context)
 
-def update_todo_view(request):
+def update_todo_view(request, todo_id=None):
+    if not request.user.is_authenticated:
+        return redirect('account_login') 
+
+    if todo_id:
+        todo = get_object_or_404(Todo, id=todo_id, user=request.user)
+    else:
+        todo = None
+
     if request.method == 'POST':
-        todo_form = TodoForm(request.POST)
+        todo_form = TodoForm(request.POST, instance=todo)
         if todo_form.is_valid():
             todo = todo_form.save(commit=False)
             todo.user = request.user
             todo.save()
-            return redirect('update_todo')
+            return redirect('update_todo')  
     else:
-        todo_form = TodoForm()
-    
+        todo_form = TodoForm(instance=todo)
+
     todos = Todo.objects.filter(user=request.user)
+
     return render(request, 'Todo/update_todo.html', {
         'todo_form': todo_form,
         'todos': todos
