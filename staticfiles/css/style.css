@@ -21,12 +21,8 @@ header {
     font-size: 1.5rem; 
 }
 
-.navbar-nav .nav-link {
-    color: white; 
-}
-
-.navbar-nav .nav-link:hover {
-    color: #f8f9fa; 
+.nav-custom {
+    color: black;
 }
 
 /* Styling for the footer */
