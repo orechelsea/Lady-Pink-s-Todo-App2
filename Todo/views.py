@@ -38,6 +38,15 @@ def update_todo_view(request, todo_id=None):
         'todo_form': todo_form,
         'todos': todos
     })
+
+def update_todo_complete(request, todo_id):
+    todo = get_object_or_404(Todo, id=todo_id, user=request.user)
+    if request.method == 'POST':
+        todo.complete = 'complete' in request.POST
+        todo.save()
+        return redirect('update_todo')
+
+
 def delete_todo_view(request, todo_id):
     todo = get_object_or_404(Todo, id=todo_id, user=request.user)
     if request.method == 'POST':
