@@ -80,24 +80,3 @@ footer {
     position: relative;
     top: 90px
 }
-
-/* Media Queries for max-width 1440px */
-@media (max-width: 1440px) {
-    .navbar-brand {
-        font-size: 2rem; 
-    }
-
-    .nav-link {
-        font-size: 1.2rem; 
-    }
-
-    .greeting, .about {
-        font-size: 1.2rem; 
-        top: 100px; 
-    }
-
-    footer {
-        top: 300px; 
-        font-size: 1.2rem; 
-    }
-}
