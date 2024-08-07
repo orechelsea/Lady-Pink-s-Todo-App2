@@ -18,24 +18,33 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg nav-custom" >
-            <a class="navbar-brand"  href="{% url 'index' %}">Lady Pink's Todo App</a>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <div class="navbar-nav ms-auto">
-                    <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
-                    {% if user.is_authenticated %}
-            <li class="nav-item">
-                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
-            </li>
-            {% else %}
-            <li class="nav-item">
-                <a class="nav-link  {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
-            </li>
-            {% endif %}
-                    <a class="nav-link" href="{% url 'update_todo' %}">Add Todo List</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-pink nav-custom">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'index' %}">Lady Pink's Todo App</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{% url 'index' %}">Home</a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page" href="{% url 'account_signup' %}">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                        </li>
+                        {% endif %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'update_todo' %}">Add Todo List</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
