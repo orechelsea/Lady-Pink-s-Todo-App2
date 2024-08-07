@@ -1,18 +1,14 @@
-
 body {
     background-color: white;
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
 }
 
-/* Styling for the header and navbar */
-header {
-    background-color: rgb(222, 94, 115); 
-    padding: 10px 0;
-}
+/* Styling for the navbar */
 
 .navbar {
-    background-color: inherit; 
+    background-color: rgb(222, 94, 115); 
 }
 
 .navbar-brand {
@@ -21,37 +17,38 @@ header {
     font-size: 1.5rem; 
 }
 
-.nav-custom {
-    color: black;
+.nav-link {
+    color: white;
+}
+
+.nav-link:hover {
+    color: black; 
 }
 
 /* Styling for the footer */
 footer {
     background-color: rgb(222, 94, 115); 
-    text-align: center;
-    padding: 20px;
     color: white; 
-    margin-top: 20px; 
+    padding: 20px;
+    border-top: 2px solid white;
+    text-align: center;
     position: relative;
-    top: 259px;
+    top: 220px;
 }
 
 .social-media-links {
     display: flex;
-    justify-content: center; 
-    gap: 690px; 
+    justify-content: space-between;
 }
 
 .social-media-links a {
     color: white; 
+    margin: 0 10px;
     text-decoration: none; 
 }
 
 .social-media-links a:hover {
-    background-color: white; 
-    color: rgb(222, 94, 115);
-    border-radius: 50%;
-    padding: 5px; 
+    color: #f8f9fa; 
 }
 
 /* Styling for boxes */
@@ -71,6 +68,7 @@ footer {
 }
 
 /* Specific styles for about section */
+
 .about {
     background-color: rgb(255, 255, 255); 
     color: rgb(222, 94, 115); 
@@ -80,5 +78,9 @@ footer {
     margin-bottom: 20px; 
     text-align: center;
     position: relative;
-    top: 180px;
+    top: 90px
+}
+
+@media (mad-width: 1440px) {
+    
 }
