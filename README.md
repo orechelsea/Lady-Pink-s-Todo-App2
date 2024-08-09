@@ -36,10 +36,9 @@ As a user my todo information is protected by login authentication.
 # WIREFRAMES
 All wireframes were created using Balsamiq.
 
-<img src="{% static 'images/Balsamiqwireframe1.png' %}" alt="balsamiqwireframe">
-<img src="{% static 'images/Balsamiqwireframe2.png' %}" alt="balsamiqwireframe">
-<img src="{% static 'images/Balsamiqwireframe3.png' %}" alt="balsamiqwireframe">
-
+<img src="doc-assets/screenshots/Balsamiqwireframe1.png" width="100%" height="100%">
+<img src="doc-assets/screenshots/Balsamiqwireframe2.png" width="100%" height="100%">
+<img src="doc-assets/screenshots/Balsamiqwireframe3.png" width="100%" height="100%">
 # FEATURES
 Image here
 
