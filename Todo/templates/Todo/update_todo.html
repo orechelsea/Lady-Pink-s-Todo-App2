@@ -9,8 +9,8 @@ Update Todo - Lady Pink's Todo App
     {% if user.is_authenticated %}
     <div class="row">
         <div class="col-md-8 offset-md-2">
-            <h2>Add/Update Todo</h2>
-            <form method="post" action="{% url 'update_todo' %}">
+            <h2>{% if todo %}Edit {% else %}Add {% endif %} Todo</h2>
+            <form method="post" action="{% if todo %}{% url 'update_todo' todo.id %}{% else %}{% url 'update_todo' %}{% endif %}">
                 {% csrf_token %}
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
@@ -28,7 +28,7 @@ Update Todo - Lady Pink's Todo App
                         <option value="high" {% if todo_form.priority.value == 'high' %}selected{% endif %}>High</option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary">Save Todo</button>
+                <button type="submit" class="btn btn-primary">{% if todo %}Update {% else %}Save {% endif %} Todo</button>
             </form>
             <hr>
             <h3>Your Todos</h3>
@@ -50,6 +50,8 @@ Update Todo - Lady Pink's Todo App
                         {% csrf_token %}
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                     </form>
+                    <a href="{% url 'update_todo' todo.id %}" class="btn btn-secondary btn-sm">Edit</a>
+                </li>
                 </li>
                 {% endfor %}
             </ul>
