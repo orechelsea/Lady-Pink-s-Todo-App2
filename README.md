@@ -36,6 +36,9 @@ As a user my todo information is protected by login authentication.
 # WIREFRAMES
 All wireframes were created using Balsamiq.
 
+<img src="images/Balsamiqwireframe1.png" alt="balsamiqwireframe">
+<img src="images/Balsamiqwireframe2.png" alt="balsamiqwireframe">
+<img src="images/Balsamiqwireframe3.png" alt="balsamiqwireframe">
 # FEATURES
 Image here
 
@@ -47,6 +50,12 @@ Navigation bar has links for 'Home', 'Logout' and 'Login/Register'.
 Logged in users will also have a 'Logout' and 'home' button highlighted in the navbar.
 The navbar is responsive, collapsing into a triple-bar menu for medium and small screen size.
 
+# Login Page
+The login page takes users to a new page where they can login to their account to add or update existing todo items, or if they have not registered find a link to register before logging in.
+
+# Logout Page
+This page confirms if the user wants to logout of their account which covers any instance where the user made a mistake in clicking the signout button.
+
 # FOOTER
 Image here
 The footer page shows a little message for users to show some love and support and the social media icons where users can click and redirects them to a different page.
@@ -56,5 +65,11 @@ Image here
 
 The todo list page has features such as the delete button which comes up with a pop up to confirm if the user wants to delete the item, an update feature where users can edit the existing todo item, priority function set at low, medium, high for the todo list. 
 
+# Structure
+This website is made of just one app: The todo App which handles the functions linked to adding or updating a todo list item.
+
+All Diagrams were created using Lucidchart
+
+# User Flow Diagram
 
 
