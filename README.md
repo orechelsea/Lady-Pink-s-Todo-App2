@@ -72,4 +72,9 @@ All Diagrams were created using Lucidchart
 
 # User Flow Diagram
 
+<img src="doc-assets/screenshots/Userflowchart.png" width="100%" height="100%">
+
+# Database Schema
+
+<img src="doc-assets/screenshots/ERD Diagram.png" width="100%" height="100%">
 
