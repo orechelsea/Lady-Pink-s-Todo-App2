@@ -85,18 +85,31 @@ All Diagrams were created using Lucidchart
 # Technology Stack
 
 HTML - For page structure
+
 CSS - For custom styling
+
 Python - for the backend
+
 Javascript - for event listeners on buttons
+
 Django - framework used to build this project
+
 Bootstrap 5 - front end framework used for styling
+
 Heroku PostgreSQL - used as the database
+
 Balsamiq - for wireframes
+
 Font Awesome - for social media icons
+
 Lucidchart - for database ER diagrams
+
 Google Fonts- for custom font styling
+
 GitHub - for storing the code and for the Kanban board
+
 Heroku - for hosting and deployement of this project
+
 Git - for version control
 
 # Testing and Validation
@@ -114,37 +127,53 @@ I used the W3 CSS Validator to check my CSS script by Direct Input. I found no e
 # Manual Testing Results
 # HOME PAGE
 Test Result
+
 Blog posts displayed as cards - Pass
+
 Filters (user and country) functionality - Pass
+
 Ability to click on a blog card - Pass
+
 Commenting functionality - Pass
-Edit and delete comment functionality - Pass
+
 User must be logged in to comment/edit/delete - Pass
+
 User must be logged in to delete blog post - Pass
+
 
 # FOOTER/NAV BAR
 Test Result
+
 Navigation links functionality - Pass
+
 Social media links functionality - Pass
 
 # LOGIN PAGE
 Test Result
+
 Secure signup functionality - Pass
+
 Redirect after successful login - Pass
 
 # REGISTRATION PAGE
 Test Result
+
 Secure login functionality - Pass
+
 Redirect after successful registration - Pass
 
 # LOGOUT PAGE
 Test Result
+
 Logout functionality - Pass
+
 Redirect after successful logout - Pass
 
 # SECURITY
 Test Result
+
 Prevention of brute force actions via URL - Pass
+
 Redirect to sign-in page after attempted unauthorized action - Pass
 
 # Known Bugs
@@ -153,43 +182,70 @@ There is a bug with the edit button in the todo list page, the user is able to e
 
 # Deployment
 Deployment Guide for Lady Pink's Todo App
+
 Deployment Steps:
+
 Creating the Heroku App
+
 Begin by signing up or logging in to Heroku.
+
 In the Heroku Dashboard, click on 'New' and then select 'Create New App'.
+
 Choose a unique name for your project, like "Travelling Scribbles".
+
 Select the EU region.
+
 Click on "Create App".
+
 In the "Deploy" tab, choose GitHub as the deployment method.
+
 Connect your GitHub account and find/connect your GitHub repository.
 
 # Setting Up Environment Variables
+
 Create env.py in the top level of the Django app.
+
 Import os in env.py.
+
 Set up necessary environment variables in env.py, including the secret key and database URL.
+
 Update settings.py to use environment variables for secret key and database.
+
 Configure environment variables in the Heroku "Settings" tab under "Config Vars".
+
 Migrate the models to the new database connection in the terminal.
+
 Configure static files and templates directories in settings.py.
+
 Add Heroku to the ALLOWED_HOSTS list.
 
 # Creating Procfile and Pushing Changes
 Create a Procfile in the top level directory.
+
 Add the command to run the project in the Procfile.
+
 Add, commit, and push the changes to GitHub.
 
 # Heroku Deployment
 In Heroku, navigate to the Deployment tab and deploy the branch manually.
+
 Monitor the build logs for any errors.
+
 Upon successful deployment, Heroku will display a link to the live site.
+
 Make sure to resolve any deployment errors by adjusting the code as necessary.
 
 
 # Credits and Acknowledgement
+
 Code Institute Walkthrough Project
+
 Code with Tomi on Youtube
+
 Django Documentation
+
 Desphixs On Youtube
+
 Ken for pointing out some things to work on with the crud functionality and responsivity of the website.
 
 
