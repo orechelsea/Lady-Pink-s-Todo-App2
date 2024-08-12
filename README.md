@@ -39,21 +39,25 @@ All wireframes were created using Balsamiq.
 <img src="doc-assets/screenshots/Balsamiqwireframe1.png" width="100%" height="100%">
 <img src="doc-assets/screenshots/Balsamiqwireframe2.png" width="100%" height="100%">
 <img src="doc-assets/screenshots/Balsamiqwireframe3.png" width="100%" height="100%">
+
 # FEATURES
 Image here
 
-Home Page
-Navigation bar:
+# Home Page
+# Navigation bar: 
+image
 
 The navigation bar appears on every page allowing users to easily navigate through the site.
 Navigation bar has links for 'Home', 'Logout' and 'Login/Register'.
 Logged in users will also have a 'Logout' and 'home' button highlighted in the navbar.
 The navbar is responsive, collapsing into a triple-bar menu for medium and small screen size.
 
-# Login Page
+# Login Page: 
+image
 The login page takes users to a new page where they can login to their account to add or update existing todo items, or if they have not registered find a link to register before logging in.
 
 # Logout Page
+image
 This page confirms if the user wants to logout of their account which covers any instance where the user made a mistake in clicking the signout button.
 
 # FOOTER
@@ -77,4 +81,116 @@ All Diagrams were created using Lucidchart
 # Database Schema
 
 <img src="doc-assets/screenshots/ERD Diagram.png" width="100%" height="100%">
+
+# Technology Stack
+
+HTML - For page structure
+CSS - For custom styling
+Python - for the backend
+Javascript - for event listeners on buttons
+Django - framework used to build this project
+Bootstrap 5 - front end framework used for styling
+Heroku PostgreSQL - used as the database
+Balsamiq - for wireframes
+Font Awesome - for social media icons
+Lucidchart - for database ER diagrams
+Google Fonts- for custom font styling
+GitHub - for storing the code and for the Kanban board
+Heroku - for hosting and deployement of this project
+Git - for version control
+
+# Testing and Validation
+
+# Responsiveness
+I used the dev tools on chrome to test the website for responsiveness. I captured screenshots to demonstrate responsive design across mobile, tablet and laptop using UI Dev. On smaller screens the screen collapses to show a toggle bar for the nav links.
+
+Include uv dev image
+
+# Testing and Validation
+I used the W3 HTML Validator  to check the HTML on each of my site pages by Direct Input. However, the only error pointed out was the django language used.
+
+I used the W3 CSS Validator to check my CSS script by Direct Input. I found no errors!.
+
+# Manual Testing Results
+# HOME PAGE
+Test Result
+Blog posts displayed as cards - Pass
+Filters (user and country) functionality - Pass
+Ability to click on a blog card - Pass
+Commenting functionality - Pass
+Edit and delete comment functionality - Pass
+User must be logged in to comment/edit/delete - Pass
+User must be logged in to delete blog post - Pass
+
+# FOOTER/NAV BAR
+Test Result
+Navigation links functionality - Pass
+Social media links functionality - Pass
+
+# LOGIN PAGE
+Test Result
+Secure signup functionality - Pass
+Redirect after successful login - Pass
+
+# REGISTRATION PAGE
+Test Result
+Secure login functionality - Pass
+Redirect after successful registration - Pass
+
+# LOGOUT PAGE
+Test Result
+Logout functionality - Pass
+Redirect after successful logout - Pass
+
+# SECURITY
+Test Result
+Prevention of brute force actions via URL - Pass
+Redirect to sign-in page after attempted unauthorized action - Pass
+
+# Known Bugs
+
+There is a bug with the edit button in the todo list page, the user is able to edit the existing todo item but instead of saving the updated todo item the user edited it saves the edited version underneath. 
+
+# Deployment
+Deployment Guide for Lady Pink's Todo App
+Deployment Steps:
+Creating the Heroku App
+Begin by signing up or logging in to Heroku.
+In the Heroku Dashboard, click on 'New' and then select 'Create New App'.
+Choose a unique name for your project, like "Travelling Scribbles".
+Select the EU region.
+Click on "Create App".
+In the "Deploy" tab, choose GitHub as the deployment method.
+Connect your GitHub account and find/connect your GitHub repository.
+
+# Setting Up Environment Variables
+Create env.py in the top level of the Django app.
+Import os in env.py.
+Set up necessary environment variables in env.py, including the secret key and database URL.
+Update settings.py to use environment variables for secret key and database.
+Configure environment variables in the Heroku "Settings" tab under "Config Vars".
+Migrate the models to the new database connection in the terminal.
+Configure static files and templates directories in settings.py.
+Add Heroku to the ALLOWED_HOSTS list.
+
+# Creating Procfile and Pushing Changes
+Create a Procfile in the top level directory.
+Add the command to run the project in the Procfile.
+Add, commit, and push the changes to GitHub.
+
+# Heroku Deployment
+In Heroku, navigate to the Deployment tab and deploy the branch manually.
+Monitor the build logs for any errors.
+Upon successful deployment, Heroku will display a link to the live site.
+Make sure to resolve any deployment errors by adjusting the code as necessary.
+
+
+# Credits and Acknowledgement
+Code Institute Walkthrough Project
+Code with Tomi on Youtube
+Django Documentation
+Desphixs On Youtube
+Ken for pointing out some things to work on with the crud functionality and responsivity of the website.
+
+
 
