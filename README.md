@@ -2,7 +2,7 @@
 
 <img src="doc-assets/screenshots/Responsiveimage1.png" width="100%" height="100%">
 
-A full-stack project built using the Django framework with; Python, JavaScript, HTML and CSS. I aim to create a functional blog website for users to get their life organised with a todo list app.
+A full-stack project built using the Django framework with Python, JavaScript, HTML and CSS. The aim was to create a functional website for users to get their life organised with a todo list app.
 
 # ABOUT
 
@@ -49,6 +49,15 @@ As a user I can get confirmation before a todo item is deleted.
 
 As a user my todo information is protected by login authentication.
 
+# Agile Development
+
+To get the minimum viable product I created a kanban board on github and listed all that needed to be done and moved them in order of todo, in progress, and done as the project progressed. This helped me to keep track of where I was lagging behind and where I was ahead.
+
+<img src="doc-assets/screenshots/Kanbanboard1.png" width="100%" height="100%">
+<img src="doc-assets/screenshots/Kanbanboard2.png" width="100%" height="100%">
+
+
+
 # WIREFRAMES
 All wireframes were created using Balsamiq.
 
@@ -66,7 +75,7 @@ All wireframes were created using Balsamiq.
 The navigation bar appears on every page allowing users to easily navigate through the site.
 Navigation bar has links for 'Home', 'Logout' and 'Login/Register'.
 Logged in users will also have a 'Logout' and 'home' button highlighted in the navbar.
-The navbar is responsive, collapsing into a triple-bar menu for medium and small screen size.
+The navbar is responsive, collapsing into a toggle menu for medium and small screen size.
 
 # Login Page: 
 
