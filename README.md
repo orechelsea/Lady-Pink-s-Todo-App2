@@ -157,20 +157,14 @@ I used the W3 HTML Validator  to check the HTML on each of my site pages by Dire
 I used the W3 CSS Validator to check my CSS script by Direct Input. I found no errors!.
 
 # Manual Testing Results
-# HOME PAGE
+# Todo List Page
 Test Result
 
-Blog posts displayed as cards - Pass
+User must be logged in to add new todo item - Pass
 
-Filters (user and country) functionality - Pass
+User must be logged in to delete todo list - Pass
 
-Ability to click on a blog card - Pass
-
-Commenting functionality - Pass
-
-User must be logged in to comment/edit/delete - Pass
-
-User must be logged in to delete blog post - Pass
+Users are notified when they log in - Pass
 
 
 # FOOTER/NAV BAR
@@ -201,6 +195,8 @@ Logout functionality - Pass
 
 Redirect after successful logout - Pass
 
+Message pop up to confirm users have logged out - Pass
+
 # SECURITY
 Test Result
 
@@ -211,6 +207,8 @@ Redirect to sign-in page after attempted unauthorized action - Pass
 # Known Bugs
 
 There is a bug with the edit button in the todo list page, the user is able to edit the existing todo item but instead of saving the updated todo item the user edited it saves the edited version underneath. 
+
+The desktop rrsponsivity for the website is not picking up the css styling. 
 
 # Deployment
 Deployment Guide for Lady Pink's Todo App
@@ -277,6 +275,8 @@ Code with Tomi on Youtube
 Django Documentation
 
 Desphixs On Youtube
+
+Dave Gray on Youtube
 
 Ken for pointing out some things to work on with the crud functionality and responsivity of the website.
 
