@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from .models import Todo
 from .forms import TodoForm
+from django.contrib import messages
 # Create your views here.
 
 def index(request):
@@ -52,3 +53,8 @@ def delete_todo_view(request, todo_id):
     if request.method == 'POST':
         todo.delete()
         return redirect('update_todo')
+
+def logout_view(request):
+    logout(request)
+    messages.add_message(request, message.INFO, 'You have been logged out successfully.')
+    return redirect('index')
