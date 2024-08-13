@@ -7,6 +7,9 @@ Update Todo - Lady Pink's Todo App
 {% block content %}
 <div class="container mt-4">
     {% if user.is_authenticated %}
+    <div id="login-message" class="alert alert-info" style="display: none;">
+        <p>Welcome Back, {{ user.username }}! You are logged in.</p>
+    </div>
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <h2>{% if todo %}Edit {% else %}Add {% endif %} Todo</h2>
@@ -70,5 +73,14 @@ Update Todo - Lady Pink's Todo App
     function confirmDelete() {
         return confirm("Are you sure you want to delete this todo item?");
     }
+   
+    document.addEventListener('DOMContentLoaded', function() {
+        var loginMessage = document.getElementById('login-message');
+        var userIsAuthenticated = "{{ user.is_authenticated|lower }}";
+        
+        if (userIsAuthenticated === 'true') {
+            loginMessage.style.display = 'block';
+        }
+    });
 </script>
 {% endblock %}

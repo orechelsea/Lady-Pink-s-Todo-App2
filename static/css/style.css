@@ -25,6 +25,7 @@ body {
     color: black; 
 }
 
+
 /* Styling for the footer */
 footer {
     background-color: rgb(222, 94, 115); 
@@ -81,24 +82,20 @@ footer {
     top: 90px
 }
 
+
 /* Media Queries for max-width 1440px */
-@media (max-width: 1440px) {
+@media (max-width: 1439px) and (min-width: 768px) {
     .navbar-brand {
-        font-size: 2rem; 
+        font-size: 1.75rem; /* Slightly larger font size */
     }
 
-    .nav-link {
-        font-size: 1.2rem; 
+    .box {
+        padding: 25px; /* Adjust padding */
     }
 
-    .greeting, .about {
-        font-size: 1.2rem; 
-        top: 100px; 
-    }
-
-    footer {
-        top: 300px; 
-        font-size: 1.2rem; 
+    .about {
+        padding: 25px; /* Adjust padding */
+        top: 100px; /* Adjust top position */
     }
 }
 
