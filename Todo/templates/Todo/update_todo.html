@@ -13,26 +13,34 @@ Update Todo - Lady Pink's Todo App
     <div class="row">
         <div class="col-md-8 offset-md-2">
             <h2>{% if todo %}Edit {% else %}Add {% endif %} Todo</h2>
-            <form method="post" action="{% if todo %}{% url 'update_todo' todo.id %}{% else %}{% url 'update_todo' %}{% endif %}">
-                {% csrf_token %}
-                <div class="mb-3">
-                    <label for="title" class="form-label">Title</label>
-                    <input type="text" name="title" class="form-control" id="title" value="{{ todo_form.title.value }}"required>
-                </div>
-                <div class="mb-3">
-                    <label for="description" class="form-label">Description</label>
-                    <textarea name="description" class="form-control" id="description">{{ todo_form.description.value }}</textarea>
-                </div>
-                <div class="mb-3">
-                    <label for="priority" class="form-label">Priority</label>
-                    <select name="priority" class="form-select" id="priority">
-                        <option value="low" {% if todo_form.priority.value == 'low' %}selected{% endif %}>Low</option>
-                        <option value="medium" {% if todo_form.priority.value == 'medium' %}selected{% endif %}>Medium</option>
-                        <option value="high" {% if todo_form.priority.value == 'high' %}selected{% endif %}>High</option>
-                    </select>
-                </div>
-                <button type="submit" class="btn btn-primary">{% if todo %}Update {% else %}Save {% endif %} Todo</button>
-            </form>
+            {% if todo_form.errors %}
+    <div class="alert alert-danger">
+        <strong>Please correct the following errors:</strong>
+        <ul>
+            {% for field in todo_form %}
+                {% for error in field.errors %}
+                    <li>{{ field.label }}: {{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+        </ul>
+    </div>
+{% endif %}
+<form method="post" action="{% if todo %}{% url 'update_todo' todo.id %}{% else %}{% url 'update_todo' %}{% endif %}">
+    {% csrf_token %}
+    <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        {{ todo_form.title }}  
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        {{ todo_form.description }} 
+    </div>
+    <div class="mb-3">
+        <label for="priority" class="form-label">Priority</label>
+        {{ todo_form.priority }}  
+    </div>
+    <button type="submit" class="btn btn-primary">{% if todo %}Update {% else %}Save {% endif %} Todo</button>
+</form>
             <hr>
             <h3>Your Todos</h3>
             <ul class="list-group">
