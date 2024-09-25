@@ -30,6 +30,8 @@ def update_todo_view(request, todo_id=None):
             todo.user = request.user
             todo.save()
             return redirect('update_todo')  
+        else:
+            messages.error(request, 'Please correct the errors below.') 
     else:
         todo_form = TodoForm(instance=todo)
 

@@ -22,3 +22,4 @@ class TodoForm(forms.ModelForm):
                 'id': 'password'  
             })
         }
+    
