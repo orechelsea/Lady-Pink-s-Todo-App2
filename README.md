@@ -210,6 +210,8 @@ There is a bug with the edit button in the todo list page, the user is able to e
 
 The desktop rrsponsivity for the website is not picking up the css styling. 
 
+Another Bug that came from the feedback was that forms could be submitted without any input, I was then able to fix this by editing my 'update html' from the manual input which doesnt flag any errors to django automated one which flags errors and calls attention to any required field that needs to be filled out. 
+
 # Deployment
 Deployment Guide for Lady Pink's Todo App
 
